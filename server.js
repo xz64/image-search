@@ -14,4 +14,8 @@ app.get('/api/imagesearch/:query', function(req, res) {
   });
 });
 
+app.get('/api/latest/imagesearch', function(req, res) {
+  res.json(imageService.recentSearches);
+});
+
 app.listen(port);
